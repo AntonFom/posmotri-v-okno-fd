@@ -68,10 +68,30 @@ ol {
   align-items: start;
 }
 
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  width: fit-content;
+}
+
+.search-form__fieldset {
+  border: 0;
+}
+
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.content__details {
+  margin-top: -78px;
 }
 
 .title {
@@ -161,4 +181,14 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
