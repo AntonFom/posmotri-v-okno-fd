@@ -48,6 +48,7 @@ ol {
   align-content: end;
   height: 534px;
   width: 1140px;
+  gap: 30px;
 }
 
 .result__video-container {
@@ -72,7 +73,30 @@ ol {
   display: flex;
   align-items: center;
   width: fit-content;
-  width: fit-content;
+  gap: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield {
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  min-width: 225px;
+  color: #fff;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: 0;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .search-form__fieldset {
@@ -80,14 +104,72 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  font-size: 18px;
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  height: 19px;
+  width: 19px;
+  padding: 1px;
+  border: 1px solid #fff;
+}
+
+.search-form__label:hover .search-form__label-text{
+  text-decoration: underline;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + ::after {
+  opacity: 1;
+}
+
+.button {
+  height: 34px;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  margin: 2px;
 }
 
 .content__details {
@@ -109,7 +191,7 @@ ol {
 .content__list-container {
   display: grid;
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
   gap: 30px;
 }
 
@@ -145,8 +227,6 @@ ol {
 
 .content__video-card-description {
   font-weight: 400;
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 18px;
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
