@@ -93,6 +93,7 @@ a {
   border-left: none;
   color: #fff;
   font-weight: 400;
+  font-size: 17px;
   background-color: transparent;
   appearance: none;
 }
@@ -111,6 +112,8 @@ a {
 
 .search-form__fieldset-title {
   font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .search-form__checkbox-list {
@@ -173,6 +176,7 @@ a {
 .search-form__submit-button {
   align-self: flex-end;
   min-width: 194px;
+  margin-bottom: -3px;
 }
 
 .more-button {
@@ -229,7 +233,8 @@ a {
 
 .content__list {
   display: grid;
-  gap: 30px;
+  gap: 28px;
+  margin-top: -6px;
 }
 
 .content__list-item {
@@ -276,8 +281,8 @@ a {
 }
 
 .content__video-card-thumbnail {
-  max-width: 194px;
-  height: 103px;
+  width: 193px;
+  height: 105px;
   object-fit: cover;
   object-position: center;
 }
